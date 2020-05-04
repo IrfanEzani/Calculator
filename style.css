@@ -8,8 +8,11 @@ body {
   height: 100vh;
   padding: 0;
   margin: 0;
-  background: linear-gradient(#45c8b4, #f548c4) no-repeat;
+  background-image: url(bg.jpg);
+  background-color: black;
+  background-position: center;
   background-size: cover;
+  background-blend-mode:luminosity;
 }
 
 .container {
@@ -21,17 +24,35 @@ body {
   grid-template-rows: minmax(100px, auto) repeat(5, 80px);
 }
 
+
+
 .container button {
   color : white;
   cursor: pointer;
   outline: none;
   font-size: 1.5rem;
-  border : 1px solid white;
-  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.container button.special {
+  color: rgb(254, 71, 252)
+}
+
+.container button.equal {
+  background: rgb(254, 71, 252)
+}
+
+.container button.bottom {
+  border-bottom: 1px solid rgb(254, 71, 252);
 }
 
 .container button:hover {
-  background-color: rgba(0, 0, 0, 0.9);
+  border:1px solid rgb(254, 71, 252);
+}
+
+.container button:active {
+  background: rgb(254, 71, 252)
 }
 
 .span-two {
@@ -40,7 +61,8 @@ body {
 
 .output {
   grid-column: 1 / -1;
-  background-color: rgba(0,0,0,0.75);
+  background-color: rgba(0,0,0,0.9);
+  border-top:  1px solid rgb(254, 71, 252);
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
